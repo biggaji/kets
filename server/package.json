@@ -28,5 +28,8 @@
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon index.ts"
   }
 }
