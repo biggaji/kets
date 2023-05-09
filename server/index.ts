@@ -9,11 +9,15 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 import express, { Request, Response, NextFunction } from "express";
+import { createServer } from "http";
 
 const app = express();
+const httpServer = createServer(app);
 
 const PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
+httpServer.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
+
+export { httpServer }
